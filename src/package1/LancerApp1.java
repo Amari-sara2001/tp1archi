@@ -35,13 +35,18 @@ public class LancerApp1 {
 		(float) Math.random()), d, 10, 10);
 		d.ajouterObjet(lesTrains[i]);
 		}
+		
 		Visage v=new Visage(d);
 		d.ajouterObjet(v);
 		
-		Forme f1=new Etoile(350,100,50,8.f,Color.RED,Color.YELLOW);
+		Forme f1=new Etoile(350,100,50,8.f,Color.RED,Color.GREEN);
 		Forme f2=new PolygoneRegulier(5,240,40,40,4.0f,Color.DARK_GRAY,null);
 		d.ajouterObjet(f1);
 		d.ajouterObjet(f2);
+		
+		d.ajouterObjet(new AnimationForme (new Etoile(350,100,50,8.f,Color.RED,Color.YELLOW), new MvtCirculaire(250,250,180,0,5)));
+		d.ajouterObjet(new AnimationForme (new PolygoneRegulier(5,240,40,40,4.0f,Color.DARK_GRAY,null) , new MvtCirculaire(210,210,180,0,5)));
+		
 		
 		while(true) {
 		// la zone de dessin se r�affiche
